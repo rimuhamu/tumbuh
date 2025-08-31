@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -56,4 +57,35 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Navigation for Compose
+    implementation(libs.androidx.navigation.compose)
+
+    // ViewModel for Compose
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+
+    // Camera functionality
+    implementation(libs.androidx.camera.core)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.view)
+
+    // Networking for API calls
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    // Image loading
+    implementation(libs.coil.compose)
+
+    // Permissions handling
+    implementation(libs.accompanist.permissions)
+
+    // Room database for local storage
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+
+
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
 }
